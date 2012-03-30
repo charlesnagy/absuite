@@ -1,6 +1,7 @@
 #!/bin/bash
 REQS=$2
-TMP=/tmp/.ab-suite-$1
+FILENAME=`basename $1`
+TMP=/tmp/.ab-suite-$FILENAME
 REPS=5
 
 URLS=`grep url $1 | sed -e "s/url=\(.*\)$/\1/g"`
